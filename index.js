@@ -1,7 +1,7 @@
-var age = 12;
-var age = 10;
+const student = {
+  name: "mustafa",
+  age: 19,
+  gpa: 3.73,
+};
 
-let age = 10;
-let age = 10;
-
-console.log(age);
+console.log(student);
