@@ -4,4 +4,5 @@ const student = {
   gpa: 3.73,
 };
 
-console.log(student);
+console.log(student["name"]);
+console.log(student.age);
