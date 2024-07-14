@@ -1,8 +1,3 @@
-const student = {
-  name: "mustafa",
-  age: 19,
-  gpa: 3.73,
-};
+let str = `A templatized string`;
 
-console.log(student["name"]);
-console.log(student.age);
+console.log(typeof str);

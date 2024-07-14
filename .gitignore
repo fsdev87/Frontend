@@ -1,2 +1,5 @@
 test.css
 test.html
+
+*.json
+node_modules/
