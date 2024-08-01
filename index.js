@@ -1,11 +1,3 @@
-let arr = [1, 2, 3, 4];
+let arr = [250, 645, 300, 900, 50];
 
-for (let i = 0; i < 5; i++) {
-  console.log(i);
-}
-
-let marks = {
-  stu1: 97,
-};
-
-console.log(marks.stu1);
+console.log(arr.toString());
