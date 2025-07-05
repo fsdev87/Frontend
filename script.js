@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const mediumLabel = document.getElementById("medium-label");
   const hardLabel = document.getElementById("hard-label");
   const cardsStatsContainer = document.querySelector(".stats-cards");
+  const errorDiv = document.querySelector(".error-div");
 
   function validateUsername(username) {
     if (username.trim() === "") {
@@ -27,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
       searchButton.textContent = "Searching...";
       searchButton.disabled = true;
       statsContainer.style.setProperty("display", "none");
+      errorDiv.style.setProperty("display", "none");
       const response = await fetch(url);
       if (response.status !== 200) {
         throw new Error("Unable to fetch the user's details");
@@ -35,16 +37,17 @@ document.addEventListener("DOMContentLoaded", function () {
       if (data["status"] !== "success") {
         throw new Error("User does not exist");
       }
-      console.log("logging data: ", data);
 
       displayUserData(data);
+      statsContainer.style.setProperty("display", "");
+      errorDiv.style.setProperty("display", "none");
     } catch (error) {
-      statsContainer.innerHTML = "<p>No data found</p>";
+      statsContainer.style.setProperty("display", "none");
+      errorDiv.style.setProperty("display", "");
       console.log("Error: ", error.message);
     } finally {
       searchButton.textContent = "Search";
       searchButton.disabled = false;
-      statsContainer.style.setProperty("display", "");
     }
   }
 
