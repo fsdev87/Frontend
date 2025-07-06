@@ -3,8 +3,54 @@
 }
 
 body {
-  padding: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #27292c;
+  margin: 0;
+  background-color: #282d35;
   color: white;
+}
+
+header {
+  height: 90px;
+  background-color: #21222a;
+  padding: 30px 25px;
+}
+
+nav > img {
+  width: 30px;
+}
+
+nav > span {
+  color: #61dafb;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 0.5rem;
+}
+
+main {
+  padding: 60px 30px;
+}
+
+main > h1 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+main > ul {
+  margin-top: 46px;
+  max-width: 400px;
+}
+
+main > ul > li {
+  padding-block: 10px;
+  line-height: 19px;
+}
+
+main > ul > li::marker {
+  color: #61dafb;
+  font-size: 1.5rem;
 }
