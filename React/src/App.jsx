@@ -1,15 +1,11 @@
-import Header from "./components/Header";
-import Entry from "./components/Entry";
-import data from "./data";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
 
 export default function App() {
-  const pageData = data.map((item) => {
-    return <Entry key={item.id} {...item} />;
-  });
   return (
     <>
       <Header />
-      <main className="container">{pageData}</main>
+      <Main />
     </>
   );
 }
