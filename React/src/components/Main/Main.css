@@ -35,3 +35,7 @@ form > button::before {
   content: "+";
   margin-right: 5px;
 }
+
+form > button:hover {
+  cursor: pointer;
+}
