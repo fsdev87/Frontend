@@ -1,6 +1,6 @@
 import "../IngredientsList/IngredientsList.css";
 
-export default function IngredientsList({ ingredients, toggleRecipeShown }) {
+export default function IngredientsList({ ingredients, getRecipe }) {
   const listIngredients = ingredients.map((ingredient) => {
     return <li key={ingredient}>{ingredient}</li>;
   });
@@ -17,7 +17,7 @@ export default function IngredientsList({ ingredients, toggleRecipeShown }) {
             <h3>Ready for a recipe?</h3>
             <p>Generate a recipe from your list of ingredients.</p>
           </div>
-          <button onClick={toggleRecipeShown}>Get a recipe</button>
+          <button onClick={getRecipe}>Get a recipe</button>
         </div>
       )}
     </section>
