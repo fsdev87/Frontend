@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./Main.css";
 import IngredientsList from "../IngredientsList/IngredientsList";
 import ClaudeRecipe from "../ClaudeRecipe/ClaudeRecipe";
@@ -27,6 +27,7 @@ export default function Main() {
   }
 
   const [recipe, setRecipe] = useState("");
+  const recipeSection = useRef(null);
 
   const [ingredients, setIngredients] = useState([]);
 
@@ -43,7 +44,11 @@ export default function Main() {
       </form>
 
       {ingredients.length > 0 && (
-        <IngredientsList getRecipe={getRecipe} ingredients={ingredients} />
+        <IngredientsList
+          getRecipe={getRecipe}
+          ingredients={ingredients}
+          ref={recipeSection}
+        />
       )}
       {recipe && <ClaudeRecipe recipe={recipe} />}
     </main>
