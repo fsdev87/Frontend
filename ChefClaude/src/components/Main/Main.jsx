@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./Main.css";
 import IngredientsList from "../IngredientsList/IngredientsList";
 import ClaudeRecipe from "../ClaudeRecipe/ClaudeRecipe";
@@ -30,6 +30,15 @@ export default function Main() {
   const recipeSection = useRef(null);
 
   const [ingredients, setIngredients] = useState([]);
+
+  useEffect(() => {
+    if (recipe && recipeSection.current) {
+      recipeSection.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, [recipe, recipeSection]);
 
   return (
     <main>
